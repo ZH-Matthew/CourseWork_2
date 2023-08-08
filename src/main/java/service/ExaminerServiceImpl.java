@@ -2,12 +2,13 @@ package service;
 
 import cw_2.Question;
 import exception.RequestedQuantityMoreAvailableException;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-
+@Service
 public class ExaminerServiceImpl implements ExaminerService{
 
     private final QuestionService data;
@@ -31,6 +32,6 @@ public class ExaminerServiceImpl implements ExaminerService{
                 questions.add(newQuestion);
             }
         }
-        return Collections.unmodifiableCollection(questions);
+        return questions;
     }
 }
