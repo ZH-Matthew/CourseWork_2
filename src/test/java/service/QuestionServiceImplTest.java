@@ -1,15 +1,42 @@
 package service;
 
+import cw_2.Question;
 import exception.QuestionNotFoundException;
-import exception.RequestedQuantityMoreAvailableException;
 import org.junit.jupiter.api.Test;
+
+import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static service.Constants.*;
 
 class QuestionServiceImplTest {
 
-    QuestionService service = new QuestionServiceImpl();
+    QuestionService service = new QuestionService() {
+        @Override
+        public Question add(String question, String answer) {
+            return null;
+        }
+
+        @Override
+        public Question add(Question question) {
+            return null;
+        }
+
+        @Override
+        public Question remove(String question, String answer) {
+            return null;
+        }
+
+        @Override
+        public Collection<Question> getAll() {
+            return null;
+        }
+
+        @Override
+        public Question getRandomQuestion() {
+            return null;
+        }
+    };
 
     @Test
     void add() {

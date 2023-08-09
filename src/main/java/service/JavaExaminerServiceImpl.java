@@ -2,18 +2,19 @@ package service;
 
 import cw_2.Question;
 import exception.RequestedQuantityMoreAvailableException;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 @Service
-public class ExaminerServiceImpl implements ExaminerService{
+@Qualifier("JavaQuestionService")
+public class JavaExaminerServiceImpl implements ExaminerService{
 
     private final QuestionService data;
 
-    public ExaminerServiceImpl(QuestionService data) {
+    public JavaExaminerServiceImpl(QuestionService data) {
         this.data = data;
     }
 

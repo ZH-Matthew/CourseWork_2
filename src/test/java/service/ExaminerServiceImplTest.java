@@ -14,10 +14,10 @@ import static service.Constants.*;
 @ExtendWith(MockitoExtension.class)
 class ExaminerServiceImplTest {
     @Mock
-    private QuestionServiceImpl repository;
+    private JavaQuestionService repository;
 
     @InjectMocks
-    private ExaminerServiceImpl out;
+    private JavaExaminerServiceImpl out;
 
 
     @Test
