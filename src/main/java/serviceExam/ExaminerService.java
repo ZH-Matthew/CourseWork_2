@@ -1,4 +1,4 @@
-package service;
+package serviceExam;
 
 import cw_2.Question;
 

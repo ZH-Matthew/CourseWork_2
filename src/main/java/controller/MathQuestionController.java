@@ -11,11 +11,12 @@ import service.QuestionService;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/exam/java")
-public class JavaQuestionController {
+@RequestMapping("/exam/math")
+public class MathQuestionController {
+
     private final QuestionService service;
 
-    public JavaQuestionController(@Qualifier("javaQuestionService") QuestionService service) {
+    public MathQuestionController(@Qualifier("mathQuestionService") QuestionService service) {
         this.service = service;
     }
 
@@ -26,11 +27,11 @@ public class JavaQuestionController {
 
     @GetMapping("/add")
     public Question addQuestion(@RequestParam String question, @RequestParam String answer) {
-        return service.add(question,answer);
+        return service.add(question, answer);
     }
 
     @GetMapping("/remove")
     public Question removeQuestion(@RequestParam String question, @RequestParam String answer) {
-        return service.remove(question,answer);
+        return service.remove(question, answer);
     }
 }
