@@ -9,12 +9,11 @@ import repository.QuestionRepository;
 import java.util.*;
 
 @Service
-@Qualifier("JavaQuestionRepository")
 public class JavaQuestionService implements QuestionService{
 
     private final QuestionRepository repository;
 
-    public JavaQuestionService(QuestionRepository repository) {
+    public JavaQuestionService(@Qualifier("javaQuestionRepository")QuestionRepository repository) {
         this.repository = repository;
     }
 

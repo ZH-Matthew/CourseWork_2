@@ -8,12 +8,11 @@ import repository.QuestionRepository;
 
 import java.util.*;
 @Service
-@Qualifier("MathQuestionRepository")
 public class MathQuestionService implements QuestionService{
 
     private final QuestionRepository data;
 
-    public MathQuestionService(QuestionRepository data) {
+    public MathQuestionService(@Qualifier("mathQuestionRepository") QuestionRepository data) {
         this.data = data;
     }
 

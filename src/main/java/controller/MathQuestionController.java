@@ -12,12 +12,11 @@ import java.util.Collection;
 
 @RestController
 @RequestMapping("/exam/math")
-@Qualifier("MathQuestionService")
 public class MathQuestionController {
 
     private final QuestionService service;
 
-    public MathQuestionController(QuestionService service) {
+    public MathQuestionController(@Qualifier("mathQuestionService") QuestionService service) {
         this.service = service;
     }
 

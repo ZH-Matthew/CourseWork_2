@@ -1,19 +1,20 @@
-package service;
+package serviceExam;
 
 import cw_2.Question;
 import exception.RequestedQuantityMoreAvailableException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import service.QuestionService;
+import serviceExam.ExaminerService;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 @Service
-@Qualifier("MathQuestionService")
-public class MathExaminerServiceImpl implements ExaminerService{
+public class MathExaminerServiceImpl implements ExaminerService {
     private final QuestionService data;
 
-    public MathExaminerServiceImpl(QuestionService data) {
+    public MathExaminerServiceImpl(@Qualifier("mathQuestionService") QuestionService data) {
         this.data = data;
     }
     @Override
