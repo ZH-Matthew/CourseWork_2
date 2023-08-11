@@ -5,17 +5,16 @@ import exception.RequestedQuantityMoreAvailableException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import service.QuestionService;
-import serviceExam.ExaminerService;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 @Service
-public class JavaExaminerServiceImpl implements ExaminerService {
+public class JavaExaminerService implements ExaminerService {
 
     private final QuestionService data;
 
-    public JavaExaminerServiceImpl(@Qualifier("javaQuestionService") QuestionService data) {
+    public JavaExaminerService(@Qualifier("javaQuestionService") QuestionService data) {
         this.data = data;
     }
 

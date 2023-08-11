@@ -1,4 +1,4 @@
-package service;
+package serviceExam;
 
 import exception.RequestedQuantityMoreAvailableException;
 import org.junit.jupiter.api.Test;
@@ -6,19 +6,18 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import serviceExam.JavaExaminerServiceImpl;
-
+import service.MathQuestionService;
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 import static service.Constants.*;
 
 @ExtendWith(MockitoExtension.class)
-class ExaminerServiceImplTest {
+class MathExaminerServiceTest {
     @Mock
-    private JavaQuestionService repository;
+    private MathQuestionService repository;
 
     @InjectMocks
-    private JavaExaminerServiceImpl out;
+    private MathExaminerService out;
 
 
     @Test
@@ -33,7 +32,7 @@ class ExaminerServiceImplTest {
     @Test
     void qetQuestionsTestException(){
         when(repository.getAll())
-                .thenReturn(QUEST_LIST);
+                .thenReturn(QUEST_LIST2);
         assertThrows(RequestedQuantityMoreAvailableException.class, ()-> out.getQuestions(10));
     }
 }

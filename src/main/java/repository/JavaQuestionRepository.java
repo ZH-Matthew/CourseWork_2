@@ -12,7 +12,7 @@ public class JavaQuestionRepository implements QuestionRepository {
     final Random random = new Random();
 
     @PostConstruct
-    void init(){
+    private void init(){
         Question q1 = new Question("Как пользоваться этим спрингом?", "На этот вопрос ответит Александр Друзь");
         Question q2 = new Question("Куда ставить эту чертову аннотацию Qualifier?", "На этот вопрос ответит Александр Друзь");
         Question q3 = new Question("Как не сойти с ума при написании юнит тестов?", "На этот вопрос ответит Александр Друзь");
