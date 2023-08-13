@@ -1,4 +1,4 @@
-package exception;
+package cw_2.exception;
 
 public class QuestionNotFoundException extends RuntimeException{
     public QuestionNotFoundException() {
