@@ -1,10 +1,10 @@
-package service;
+package cw_2.repository;
 
 import cw_2.Question;
 
 import java.util.Collection;
 
-public interface QuestionService {
+public interface QuestionRepository {
     Question add(String question, String answer);
 
     Question add(Question question);

@@ -1,6 +1,6 @@
-package repository;
+package cw_2.repository;
 import cw_2.Question;
-import exception.QuestionNotFoundException;
+import cw_2.exception.QuestionNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;

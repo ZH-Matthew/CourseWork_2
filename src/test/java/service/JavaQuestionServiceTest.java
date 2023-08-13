@@ -1,12 +1,13 @@
 package service;
 
-import exception.QuestionNotFoundException;
+import cw_2.exception.QuestionNotFoundException;
+import cw_2.service.JavaQuestionService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import repository.JavaQuestionRepository;
+import cw_2.repository.JavaQuestionRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;

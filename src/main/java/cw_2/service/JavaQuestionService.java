@@ -1,10 +1,9 @@
-package service;
+package cw_2.service;
 
 import cw_2.Question;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import repository.JavaQuestionRepository;
-import repository.QuestionRepository;
+import cw_2.repository.QuestionRepository;
 
 import java.util.*;
 

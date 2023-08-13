@@ -1,6 +1,8 @@
 package repository;
 
-import exception.QuestionNotFoundException;
+import cw_2.exception.QuestionNotFoundException;
+import cw_2.repository.JavaQuestionRepository;
+import cw_2.repository.QuestionRepository;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
